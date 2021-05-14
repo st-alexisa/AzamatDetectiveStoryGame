@@ -1,70 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    static List<Item> items;
-    public static GameObject CellContainer;
-    public KeyCode ShowInventory;
+    List<Item> items;
+    public GameObject cellContainer;
+    public KeyCode showInventory;
 
-    public static void AddItem(Item item)
-    {
-        items.Add(item);
-        foreach (var it in items)
-        {
-            if(it.Id == 0)
-            {
-                it.Description = item.Description;
-                it.Id = item.Id;
-                it.ItemName = item.ItemName;
-                it.pathIcon = item.pathIcon;
-                it.pathPrefab = item.pathPrefab;
-                break;
-            }
-        }
-        DisplayItems();
-    }
-
-    static void DisplayItems()
-    {
-        for (int i = 0; i < items.Count; i++)
-        {
-            Transform cell = CellContainer.transform.GetChild(i);
-            Transform icon = cell.GetChild(0);
-            Image img = icon.GetComponent<Image>();
-            if (items[i].Id !=0)
-            {
-                img.enabled = true;
-                img.sprite = Resources.Load<Sprite>(items[i].pathIcon);
-            }
-            else
-            {
-                img.enabled = false;
-                img.sprite = null;
-            }
-        }
-    }
-
+    // Start is called before the first frame update
     void Start()
     {
         items = new List<Item>();
-        CellContainer.SetActive(false);
-        for (int i = 0; i < CellContainer.transform.childCount; i++)
-        {
-            items.Add(new Item());
-        }
+
+        cellContainer.SetActive(false);
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(ShowInventory))
+        if(Input.GetKeyDown(showInventory))
         {
-            if (CellContainer.activeSelf)
-                CellContainer.SetActive(false);
+            if (cellContainer.activeSelf)
+                cellContainer.SetActive(false);
             else
-                CellContainer.SetActive(true);
+                cellContainer.SetActive(true);
         }
     }
 }

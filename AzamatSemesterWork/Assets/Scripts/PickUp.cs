@@ -7,7 +7,6 @@ public class PickUp : MonoBehaviour
     public GameObject E;
     public GameObject Evidence;
     public GameObject Trigger;
-    public Item EvidenceForInvent;
 
     private void Start()
     {
@@ -22,8 +21,6 @@ public class PickUp : MonoBehaviour
             E.SetActive(false);
             Evidence.SetActive(false);
             Trigger.SetActive(false);
-            Inventory.AddItem(EvidenceForInvent);
-
         }
     }
 

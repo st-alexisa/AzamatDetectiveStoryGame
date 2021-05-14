@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8162466633596087052}
   - component: {fileID: 6242586538994687942}
   - component: {fileID: 4711762193984034690}
-  - component: {fileID: 893072418116213718}
+  - component: {fileID: -8704970458227494656}
   m_Layer: 0
   m_Name: shellCase
   m_TagString: Untagged
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.041354556, y: 0.042124644, z: 0.090547055}
   m_Center: {x: -0.00010144524, y: 0.00080259703, z: -0.018380674}
---- !u!114 &893072418116213718
+--- !u!114 &-8704970458227494656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,9 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678fbded45da4794b92e71c2904d5cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: ShellCase
-  Id: 1
-  Description: "\u0411\u043B\u0430-\u0431\u043B\u0430 \u0443\u043B\u0438\u043A\u0430
-    \u0431\u043B\u0430"
-  pathIcon: Icons/ShellCaseIcon
-  pathPrefab: 
+  Name: ShellCase
+  Id: 0
+  Description: ULIKAAAA(ulitka)
+  IconPath: Icons/ShellCaseIcon
+  PrefabPath: Prefabs/shellCase

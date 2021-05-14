@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string ItemName;
+    public string Name;
     public int Id;
+    [Multiline(5)]
     public string Description;
-    public string pathIcon;
-    public string pathPrefab;
+    public string IconPath;
+    public string PrefabPath;
 }
