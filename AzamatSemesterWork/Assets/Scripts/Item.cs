@@ -10,4 +10,9 @@ public class Item : MonoBehaviour
     public string Description;
     public string IconPath;
     public string PrefabPath;
+
+    public bool IsEmpty() 
+    {
+        return Id == 0;
+    }
 }
