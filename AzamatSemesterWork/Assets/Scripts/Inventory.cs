@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
                 // if мы смотрим на объект, у которого есть скрипт Item
                 if (hit.collider.GetComponent<Item>())
                 {
-                    for (int i = 0; i < items.Count; ++i) 
+                    for (int i = 0; i < items.Count; ++i)
                     {
                         if (items[i].IsEmpty())
                         {
