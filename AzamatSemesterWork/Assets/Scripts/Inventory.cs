@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        items = new List<Item>();
+        items = new List<Item>(); 
 
         cellContainer.SetActive(false);
 
